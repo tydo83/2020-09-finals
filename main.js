@@ -57,18 +57,29 @@ const addToMultiDigitNumbers = (num, arr) => {
   })
 } 
 
-// const faqtory = () => {
-//   const test = {
-//     questions: [],
-//     addQuestion: function(str) {
-//       this.questions.push(str);
-//     },  
-//   }
-//   return test
-// }
+const Faqtory = () => {
+  return {
+      questions: [],
+      addQuestion: function(question) {
+        this.questions.push(
+          {
+            text: question,
+            answered: false, 
+            id: 0,
+          }
+        )
+      },
+      answerQuestion: function() {
+        this.questions.answered = true;
+      }
+  }
+}
 
-// faqtory.addQuestion('test');
-// a;
+const faqtory = Faqtory();
+faqtory.addQuestion('What is your site all about?');
+
+console.log(faqtory);
+
 
 
 // Our code goes below... DO NOT TOUCH.
